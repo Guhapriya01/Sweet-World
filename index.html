@@ -614,16 +614,18 @@
     <!-- js file -->
     <script>
 
-        setTimeout(function(){
-            document.getElementById('spinner').style.display = 'none';
-            document.getElementById('main-content').style.display = 'block';
-            document.getElementById('other').style.display = 'block';
-        },2000);
+        // Loading
+        setTimeout(function () {
+            document.getElementById("spinner").style.display = "none";
+            document.getElementById("main-content").style.display = "block";
+            document.getElementById("other").style.display = "block";
+        }, 2000);
 
-        document.getElementById(`send-btn`).addEventListener('click',()=>{
+        document.getElementById(`send-btn`).addEventListener("click", () => {
             showAlert();
         });
 
+        // Success alert
         function showAlert() {
             var divExist = document.getElementById(`success-btn-i`);
 
@@ -646,10 +648,13 @@
         }
 
         // Tooltip
-        var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+        var tooltipTriggerList = [].slice.call(
+            document.querySelectorAll('[data-bs-toggle="tooltip"]')
+        );
         var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
-            return new bootstrap.Tooltip(tooltipTriggerEl)
-        })
+            return new bootstrap.Tooltip(tooltipTriggerEl);
+        });
+
 
     </script>
 </body>
